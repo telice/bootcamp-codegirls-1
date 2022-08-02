@@ -1,0 +1,75 @@
+ // Aluna: Telice Morais Saldanha //
+// questão 2 //
+
+
+#include<iostream>
+using namespace std;
+
+
+
+void matident(int mat[100][100], int n) {
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (i == j) {
+				mat[i][j] = 1;
+			}
+			else {
+				mat[i][j] = 0;
+			}
+		}
+	}
+}
+
+void mostramatriz(int mat[100][100], int linha, int coluna) {
+	for (int i = 0; i < linha; i++) {
+		for (int j = 0; j < coluna; j++) {
+			cout << mat[i][j] << "   ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+
+
+
+int main()
+{
+	int mat[100][100], n;
+	cout << "Digite a dimensao da matriz identidade desejada:\n";
+	cin >> n;
+
+
+
+	matident(mat, n);
+	mostramatriz(mat, n, n);
+
+	char op = 'n';
+	bool Cond = true;
+	do
+	{
+
+		cout << "deseja fazer outra matriz? digite sim ou nao ";
+		cin >> op;
+		if (op == 'n' || op == 'N' || op == 'não' || op == 'nao')
+			Cond = false;
+		if (op == 's' || op == 'S' || op == 'sim') {
+			int mat[100][100], n;
+			cout << "Digite a dimensao da matriz identidade desejada:\n";
+			cin >> n;
+
+
+
+			matident(mat, n);
+			mostramatriz(mat, n, n);
+		}
+
+
+
+	} while (Cond);
+
+
+	system("pause");
+	return 0;
+
+}

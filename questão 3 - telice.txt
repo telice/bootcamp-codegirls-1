@@ -1,0 +1,63 @@
+// Aluna: Telice Morais Saldanha//
+// questão 3 : elabore um app capaz de somar duas matrizes 3x3//
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+
+
+
+int main()
+{
+	// Para matrizes genericas 3 por 3 //
+		int A[3][3], B[3][3], C[3][3];
+
+	
+		printf("\t digite os valores abaixo da matriz A de ordem 3 (linha por linha)\n");
+		for (int i = 0; i < 3; ++i) {
+			for (int j = 0; j < 3; ++j) {
+				
+				printf("A[%d][%d]: ", i, j);
+				scanf_s("%d", &A[i][j]);
+			}
+		}
+
+		
+		printf("\n");
+
+	
+		printf("\t digite os valores abaixo da matriz B de ordem 3 (linha por linha)\n");
+		for (int i = 0; i < 3; ++i) {
+			for (int j = 0; j < 3; ++j) {
+				printf("B[%d][%d]: ", i, j);
+				scanf_s("%d", &B[i][j]);
+			}
+		}
+
+		printf("\n");
+
+		
+		printf("\t a soma das matrizes A e B e´:\n");
+		for (int i = 0; i < 3; ++i) {
+			for (int j = 0; j < 3; ++j) {
+				C[i][j] = A[i][j] + B[i][j];
+				
+				printf("%d\t", C[i][j]);
+				
+				if (j == 2) printf("\n");
+			}
+		}
+
+
+
+
+
+
+
+		printf("\n");
+		system("pause");
+
+	}
+
+
